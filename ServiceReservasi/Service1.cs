@@ -119,7 +119,7 @@ namespace ServiceReservasi
             List<Pemesanan> pemesanans = new List<Pemesanan>();
             try
             {
-                string sql = " select ID_reservasi, Nama_customer, No_telpon, " + "Jumlah_pemesanan, Nama_Lokasi from dbo.Pemesanan p join dbo.Lokasi 1 on p.ID_lokasi = 1.ID_lokasi";
+                string sql = " select ID_reservasi, Nama_customer, No_telpon, " + "Jumlah_pemesanan, Nama_Lokasi from dbo.Pemesanan p join dbo.Lokasi l on p.ID_lokasi = l.ID_lokasi";
                 connection = new SqlConnection(constring);
                 com = new SqlCommand(sql, connection);
                 connection.Open();
